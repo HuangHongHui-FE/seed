@@ -1,0 +1,55 @@
+<!--pages/contact/cantact.wxml-->
+<!-- 微信登录 -->
+<view class="user" wx:if="{{isLogin == false}}">
+    <image src='/images/social_wechat.png'></image>
+    <view class='login' bindtap="login">微信登录</view>
+</view>
+<view wx:else class="user">
+    <image src="{{msg.avataUrl}}"></image>
+    <view class='login' bindtap="notLogin">{{msg.nickName}}</view>
+</view>
+<van-cell
+  is-link
+  icon="medal-o"
+  title="我的单词"
+  bindtap="myWord"
+/>
+<van-cell
+  is-link
+  icon="bookmark-o"
+  title="我的短语"
+  link-type="navigateTo"
+  url="/pages/word/word"
+/>
+<van-cell
+  is-link
+  icon="like-o"
+  title="语录收藏"
+  link-type="navigateTo"
+  url="/pages/word/word"
+/>
+<view class='contact'>
+    <van-cell
+        is-link
+        icon="service-o"
+        title="联系我们"
+        link-type="navigateTo"
+        url="/pages/word/word"
+    />
+    <van-cell
+    is-link
+    icon="friends-o"
+    title="分享好友"
+    bind:click="onClick"
+    />
+  <van-share-sheet
+    show="{{ showShare }}"
+    title="立即分享给好友"
+    options="{{ options }}"
+    bind:select="onSelect"
+    bind:close="onClose"
+  />
+</view>
+
+
+

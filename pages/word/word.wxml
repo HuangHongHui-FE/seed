@@ -1,0 +1,85 @@
+<!--pages/word/word.wxml-->
+<view class="container" wx:if="{{isLogin}}">
+    <!-- <image src="/images/Word/search.png" bindtap="search"></image> -->
+    <input class="search" type="text" placeholder="查询 | 英文或中文" bindinput="input"></input>
+    <image src="/images/Word/search.png" class="searchIcon" bindtap="search"></image>
+    <view class="record">
+        <view>
+            <text>已学单词</text>
+            <view class="learnedwords">
+                <text class="learnedwords">{{dataObj.all_num}}</text>
+            </view>
+        </view>
+        <view class="separator">|</view>
+        <view>
+            <text>打卡天数</text>
+            <view class="learnedwords">
+                <text class="learnedDays">{{dataObj.history.length}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="plan">
+    <view class="planboxone">
+        剩余单词： {{750 - dataObj.all_num}}
+        <input class="studyplan" type="text" placeholder="学习目标 " value="{{dataObj.flag}}" bindinput="flagInput"></input>
+        <image src="/images/Word/edit.png" class="edit" bindtap="edit"></image>
+    </view>
+    <progress border-radius="12px"></progress>
+    <view class="record">
+        <view>
+            <view class="learnedwords">
+                <text class="learnedwords">{{50 - dataObj.today_num}}</text>
+            </view>
+            <text>今日剩余</text>
+        </view>
+        <view class="distance"></view>
+        <view>
+            <view class="learnedwords">
+                <text class="learnedDays">{{dataObj.all_num}}</text>
+            </view>
+            <text>本书已学</text>
+        </view>
+        <view class="distance"></view>
+        <view>
+            <view class="learnedwords">
+                <text class="learnedDays">{{(750 - dataObj.all_num) / 50}}</text>
+            </view>
+            <text>剩余天数</text>
+        </view>
+    </view>
+    <button class="begin" bindtap="start_study">开始学习</button>
+
+</view>
+<view class="additional">
+    <view>
+        <image src="/images/Word/data.png" style="width: 22px;height: 22px; padding: 0 0 10px 14px;"></image>
+        <text>真题资料</text>
+    </view>
+    <view class="distance"></view>
+    <view bindtap="history">
+        <image src="/images/Word/clock.png" style="width: 22px;height: 22px; padding: 0 0 10px 14px;"></image>
+        <text>打卡日历</text>
+    </view>
+
+    <view class="distance"></view>
+    <view>
+        <image src="/images/Word/wordbook.png" style="width: 22px;height: 22px; padding: 0 0 10px 10px;"></image>
+        <text>单词本</text>
+    </view>
+</view>
+<van-calendar
+    show="{{show}}"
+    type="multiple"
+    bind:close="onClose"
+    bind:confirm="onConfirm"
+    class="calendar"
+    readonly
+    formatter="{{ formatter }}"
+    min-date="{{ minDate }}"
+    max-date="{{ maxDate }}"
+    title="打卡日历"
+/>
+
+
+

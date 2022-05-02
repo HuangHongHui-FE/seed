@@ -1,0 +1,59 @@
+<!--pages/home/home.wxml-->
+<swiper class="swiper-container" indicator-dots>
+    <swiper-item>
+        <view class="item">
+            <image src="/images/posterthree.png" mode="widthFix"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item">
+            <image src="/images/postertwo.png" mode="widthFix"></image>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="item">
+            <image src="/images/posterone.png" mode="widthFix"></image>
+        </view>
+
+    </swiper-item>
+</swiper>
+
+<!-- 搜索框 -->
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  show-action
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+  bind:change="onValueUp"
+/>
+
+
+<!-- 标签分类 -->
+<van-tabs active="{{ active }}" bind:change="onChange" >
+  <!-- <van-tab title="收藏">
+    <image src='/images/anny.png' style='width: 300rpx; height: 300rpx;'></image>
+    <text>
+        cahhwdgchadgchjdgschdvscgdvscgdvsghcvdghvgvcgdvgcv
+    </text>
+  </van-tab> -->
+  <van-tab title="{{item}}" wx:for="{{tabs}}"  wx:for-item="item" wx:for-index="index" wx:key="index">
+    <view class='movie' wx:for="{{dataList}}"  wx:for-item="item1" wx:for-index="id" wx:key="index">
+            <image src="{{item1.img}}" style='width: 260rpx; height: 260rpx;'></image>
+        <view class="textbox">
+            <view class='movieTitle'>{{item1.title}}
+            </view>
+            <view class="movieIntroduce">
+                {{item1.content}}
+            </view>
+            <van-icon wx:if="{{item1.flag == 0}}" name="star-o" bind:click="onStarChange" data-item="{{item1}}"/>
+            <van-icon wx:else color="#f6d365" name="star-o" bind:click="cancelStarChange" data-item="{{item1}}"/>
+        </view>
+    </view>
+  </van-tab>
+</van-tabs>
+
+
+
+
+

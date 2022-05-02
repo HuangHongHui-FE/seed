@@ -1,0 +1,20 @@
+/* pages/contact/cantact.wxss */
+
+.user{
+    height: 200rpx;
+   display: flex;
+   flex-direction: row;
+   /* justify-content: center; */
+   align-items: center;
+   padding: 20rpx 40rpx;
+   border-bottom: 12rpx solid #eceded;
+}
+.user image{
+    width: 160rpx; 
+    height: 160rpx;
+    border-radius: 50% 50%;
+}
+.login{
+    margin: 0 0 0 60rpx;
+    font-weight: 500;
+}

@@ -1,0 +1,51 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/contact/cantact",
+        "pages/word/word",
+        
+        "pages/sentence/sentence",
+        
+        "pages/cloudStorage/cloudStorage",
+        "pages/search/search",
+        "pages/wdetail/wdetail"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#66CC99",
+        "navigationBarTitleText": "Seed 英语",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "home",
+                "iconPath": "/images/tabs/home.png",
+                "selectedIconPath": "/images/tabs/home.png"
+            },
+            {
+                "pagePath": "pages/sentence/sentence",
+                "text": "sentence",
+                "iconPath": "/images/tabs/sentence.png",
+                "selectedIconPath": "/images/tabs/sentence.png"
+            },
+            {
+                "pagePath": "pages/word/word",
+                "text": "word",
+                "iconPath": "/images/tabs/word.png",
+                "selectedIconPath": "/images/tabs/word.png"
+            },
+            {
+                "pagePath": "pages/contact/cantact",
+                "text": "user",
+                "iconPath": "/images/tabs/user.png",
+                "selectedIconPath": "/images/tabs/user.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "van-calendar": "@vant/weapp/calendar/index"
+    }
+}

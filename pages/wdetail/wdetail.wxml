@@ -1,0 +1,14 @@
+<!--pages/wdetail/wdetail.wxml-->
+<view wx:if="{{m == 's' || m == 'm'}}" class="con1" wx:for="{{sList}}"  wx:for-item="item" wx:for-index="index" wx:key="index">
+  <view class="word">{{item.word}}</view>
+  <view class="chinese">{{item.exp}}</view>
+</view>
+
+<view wx:if="{{m == 'k'}}" class="con2">
+  <view class="word">{{oneData.word}}</view>
+  <view class="chinese">{{oneData.exp}}</view>
+  <view class="bottom">
+    <button size="mini" bindtap="pre">上一个</button>
+    <button size="mini" bindtap="next">下一个</button>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+/* pages/sentence/sentence.wxss */
+.sentenceBox{
+    border: 1px solid rgb(243, 237, 237);
+    margin: 10px;
+    border-radius: 12px;
+}

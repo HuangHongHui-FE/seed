@@ -1,0 +1,10 @@
+<!--pages/movieIntroduce/movieIntroduce.wxml-->
+<van-nav-bar
+  title="剧情介绍"
+  left-arrow
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"
+/>
+
+
+

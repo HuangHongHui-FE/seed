@@ -1,0 +1,49 @@
+/* pages/home/home.wxss */
+.swiper-container{
+    height: 150px;
+}
+image{
+    border-radius: 12rpx;
+}
+.item{
+    height: 100%;
+    line-height: 150px;
+    text-align: center;
+    /* margin: 10px 0; */
+}
+
+  
+  .search {
+    width: 666rpx;
+    height: 70rpx;
+    background: rgba(244, 246, 248, 1);
+    border-radius: 30rpx;
+    margin: 20rpx 42rpx 20rpx 42rpx;
+    font-size: 26rpx;
+    color: #000;
+    line-height: 70rpx;
+    text-align: center;
+  }
+
+  .movie{
+      margin: 20rpx 16rpx;
+      display: flex;
+      flex-direction: row;
+      border: 1px solid rgb(233, 227, 227);
+      padding: 6rpx;
+  }
+  .textbox{
+    margin: 0 0 0 20rpx;
+    width: 450rpx;
+  }
+  .movieTitle{
+      font-weight: 600;
+  }
+  .movieIntroduce{
+      margin: 10rpx 0 0 0;
+      font-size: 30rpx;
+  }
+
+
+
+

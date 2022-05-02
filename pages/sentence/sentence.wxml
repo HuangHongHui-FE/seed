@@ -1,0 +1,10 @@
+<!--pages/sentence/sentence.wxml-->
+<view class="sentenceBox">
+    <image src="/images/sentence.png" style="border-radius: 12px; width: 100%; height:194px">
+        <a></a>
+    </image>
+    <text>I hava no idea,but X rays alone could be a couple hundred dollars.我不知道，但是x光可能得好几百元。</text>
+</view>
+
+<navigator url="/pages/word/word" open-type="switchTab">跳转到单词页面</navigator>
+

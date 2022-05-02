@@ -1,0 +1,130 @@
+/* pages/word/word.wxss */
+.container{
+    /* display: flex;
+    flex-direction: column; */
+    /* height: 150px; */
+    /* padding: -500rpx 0; */
+    background-color: #66cc99;
+    /* margin: -70px 0 0 0; */
+    /* position: relative; */
+}
+.search {
+    width: 666rpx;
+    height: 70rpx;
+    background: rgba(244, 246, 248, 1);
+    border-radius: 17px;
+    box-sizing: border-box;
+    font-size: 26rpx;
+    color: #000;
+    line-height: 70rpx;
+    text-align: left;
+    padding: 0 40rpx;
+    margin: -70px 0 0 0;
+  }
+  .searchIcon{
+      width: 20px;
+      height: 20px;
+      margin: -24px -220px 0 0;
+      z-index: 100;
+  }
+
+.record{
+    /* width: 300px; */
+    /* padding: 10px 0 0 0; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    font-size: 32rpx;
+    font-weight: 400;
+    margin: 20px 0 0 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.learnedwords{
+    font-size: 74rpx;
+    text-align: center;
+}
+.separator{
+    color: gray;
+    font-size: 22px;
+    font-weight: 100;
+    padding: 26px 56px 0 56px;
+}
+.learnedDays{
+    font-size: 74rpx;
+}
+.plan{
+    width: 240px;
+    /* height: 0px; */
+    background-color: white;
+    /* margin: 0 auto; */
+    margin: -70px auto 0;
+    border-radius: 12px;
+    border: 1px solid #66cc99;
+    font-size: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.planboxone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* position: relative; */
+}
+.studyplan{
+    width: 90px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid #66cc99;
+    border-radius: 12px;
+    /* margin: -6px 0 0 60px;  */
+}
+.edit{
+    width: 16px;
+    height: 16px;
+    /* position: absolute; */
+     /* left:-20px; */
+    margin: 0 0 0 -88px;
+    z-index: 100;
+}
+progress{
+    /* top:10px; */
+    margin: 16px 0 -10px 0;
+}
+.planboxtwo{
+    margin: 20px 0;
+}
+.distance{
+    margin: 0 18px;
+}
+.begin{
+    background-color: #66cc99;
+    /* width: 30px; */
+    /* height: 40px; */
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 16px; 
+    margin: 16px 0 0 0;
+}
+.additional{
+    width: 100%;
+    padding: 30px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    font-size: 14px;
+    text-align: center;
+}
+.additional view{
+    display: flex;
+    flex-direction: column;
+}
+
+/* 日历 */
+.calendar{
+    z-index: 9999;
+}
+
+
