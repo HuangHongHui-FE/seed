@@ -10,12 +10,16 @@ Page({
      */
     data: {
         showShare: false,
+        showContact: false,
         options: [
         { name: '微信', icon: 'wechat', openType: 'share' },
         { name: '微博', icon: 'weibo' },
         { name: '复制链接', icon: 'link' },
         { name: '分享海报', icon: 'poster' },
         { name: '二维码', icon: 'qrcode' },
+        ],
+        options2: [
+          { name: '13703949346', icon: 'wechat', openType: 'contact'}
         ],
         // 是否登录的标识
         isLogin: false,
@@ -64,7 +68,6 @@ Page({
         )
       })
       console.log(app.globalData.openId)
-      
     },
 
 
@@ -157,22 +160,41 @@ Page({
       })
     },
 
+    // 点击分享好友
     onClick(event) {
         this.setData({ showShare: true });
       },
-    
       onClose() {
-        this.setData({ showShare: false });
+        this.setData({ showShare: false, showContact: false });
       },
     
       onSelect(event) {
         Toast(event.detail.name);
         this.onClose();
       },
+
+    // 点击联系我们
+    onContact(){
+      this.setData({ showContact: true });
+    },
+    
+    
+      
+
+    // 点击联系我们
+    contact: function(){
+      var query = wx.createSelectorQuery();
+      console.log(query)
+      query.select('.contact');
+      query.exec(function (res) {
+        console.log(res)
+      })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+      console.log(options)
       const that = this
       let res = wx.getStorageSync('msg')
       if(res.openId != undefined && res.openId != ''){

@@ -261,6 +261,13 @@ Page({
      */
     onShow: function () {
       console.log(app.globalData)
+
+      // 如果没有登录，直接跳转到user页面
+      if(app.globalData.openId == ''){
+          wx.switchTab({
+            url: '/pages/contact/cantact'
+          })
+      }
     },
 
     /**

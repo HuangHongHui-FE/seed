@@ -33,8 +33,8 @@
         is-link
         icon="service-o"
         title="联系我们"
-        link-type="navigateTo"
-        url="/pages/word/word"
+        class="contact"
+        bindtap="onContact"
     />
     <van-cell
     is-link
@@ -46,6 +46,13 @@
     show="{{ showShare }}"
     title="立即分享给好友"
     options="{{ options }}"
+    bind:select="onSelect"
+    bind:close="onClose"
+  />
+  <van-share-sheet
+    show="{{ showContact }}"
+    title="联系客服"
+    options="{{ options2 }}"
     bind:select="onSelect"
     bind:close="onClose"
   />

@@ -8,7 +8,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        isLogin: true,
+        // isLogin: true,
         // 搜索框填入的
         value: '',
         dataObj: {},
@@ -31,6 +31,7 @@ Page({
         // console.log('开始学习')
         const that = this
         let all_num = that.data.dataObj.all_num
+        console.log(all_num)
         wx.navigateTo({
             url: `/pages/wdetail/wdetail?value=${all_num}&m=k`,  // m=k为了判断是点击开始学习的跳转
             events: {
@@ -48,7 +49,7 @@ Page({
                     })
 
                     // 数据库数据也更新
-                    console.log(that.data.dataObj.openId)
+                    // console.log(that.data.dataObj.openId)
                     db.collection('seed-users').where({
                         openId: that.data.dataObj.openId
                     })
@@ -163,6 +164,21 @@ Page({
         });
     },
 
+
+    // 跳转到单词本
+    goWordBook: function(){
+        wx.navigateTo({
+            url: '/pages/wordbook/wordbook'  // m=d为了判断是从单词数跳转过去的
+        })
+    },
+
+    // 跳转到真题资料
+    goRealBook: function(){
+        wx.navigateTo({
+            url: '/pages/realbook/realbook'  // m=d为了判断是从单词数跳转过去的
+        })
+    },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -174,16 +190,14 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        if(this.data.dataObj == {}){
+        console.log(this.data.dataObj, app.globalData.openId)
+        if(!this.data.dataObj[history]){
+            // console.log('a')
             this.onLoad()
         }
         if(app.globalData.openId == ''){
-            this.setData({
-                isLogin: false
-            })
-        }else{
-            this.setData({
-                isLogin: true
+            wx.switchTab({
+              url: '/pages/contact/cantact'
             })
         }
     },

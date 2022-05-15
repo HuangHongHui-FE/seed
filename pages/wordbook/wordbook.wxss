@@ -1,0 +1,33 @@
+.con {
+  border-top: solid 1rpx rgb(255, 255, 255);
+  border-bottom: solid 1rpx rgb(255, 255, 255);
+  background-color: rgb(147, 223, 241);
+}
+.book{
+  display: flex;
+  width: 600rpx;
+  height: 300rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book image{
+  display: block;
+  width: 250rpx;
+  height: 300rpx;
+}
+
+.zi{
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.zi :nth-child(1){
+  font-weight: 800;
+}
+.zi :nth-child(2){
+  font-weight: 300;
+}

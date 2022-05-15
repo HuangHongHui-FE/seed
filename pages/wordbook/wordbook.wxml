@@ -1,0 +1,10 @@
+<!--单词本页-->
+<view class="con" wx:for="{{dataLs}}"  wx:for-item="item" wx:for-index="id" wx:key="id" bindtap="goWDetail">
+  <view class="book">
+    <image src="{{item.src}}" alt="" class="img"></image>
+    <view class="zi">
+      <view>{{item.title}}</view>
+      <view>{{item.num}}</view>
+    </view>
+  </view>
+</view>

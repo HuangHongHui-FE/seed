@@ -56,7 +56,7 @@ Page({
 
       // 点击开始学习跳转进来的
     }else if(options.m == 'k'){
-      let value = parseInt(options.value) || 1   // 应该是第几个要背的单词
+      let value = parseInt(options.value) || 0   // 应该是第几个要背的单词
       // 根据要背的单词在数据库的顺序， 查单词的详情
       db.collection('seed-words').where({}).skip(value).limit(1).get().then(res => {
         that.setData({
@@ -79,6 +79,15 @@ Page({
       // 查出已经背过得单词的
       db.collection('seed-words').where({}).limit(parseInt(options.num)).get().then(res => {
         console.log(res)
+        that.setData({
+          sList: res.data,
+          m: 'm'
+        })
+      })
+      // 如果是从单词书跳转过来的
+    }else if(options.m == 'd'){
+      db.collection('seed-words').where({}).get().then(res => {
+        // console.log(res)
         that.setData({
           sList: res.data,
           m: 'm'

@@ -1,5 +1,5 @@
 <!--pages/word/word.wxml-->
-<view class="container" wx:if="{{isLogin}}">
+<view class="container">
     <!-- <image src="/images/Word/search.png" bindtap="search"></image> -->
     <input class="search" type="text" placeholder="查询 | 英文或中文" bindinput="input"></input>
     <image src="/images/Word/search.png" class="searchIcon" bindtap="search"></image>
@@ -52,7 +52,7 @@
 
 </view>
 <view class="additional">
-    <view>
+    <view bindtap="goRealBook">
         <image src="/images/Word/data.png" style="width: 22px;height: 22px; padding: 0 0 10px 14px;"></image>
         <text>真题资料</text>
     </view>
@@ -63,7 +63,7 @@
     </view>
 
     <view class="distance"></view>
-    <view>
+    <view bindtap="goWordBook">
         <image src="/images/Word/wordbook.png" style="width: 22px;height: 22px; padding: 0 0 10px 10px;"></image>
         <text>单词本</text>
     </view>

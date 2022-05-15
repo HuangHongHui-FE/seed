@@ -1,5 +1,6 @@
 {
     "pages": [
+        
         "pages/home/home",
         "pages/contact/cantact",
         "pages/word/word",
@@ -8,7 +9,10 @@
         
         "pages/cloudStorage/cloudStorage",
         "pages/search/search",
-        "pages/wdetail/wdetail"
+        "pages/wdetail/wdetail",
+        "pages/wordbook/wordbook",
+        "pages/realbook/realbook"
+        
     ],
     "window": {
         "backgroundTextStyle": "light",
